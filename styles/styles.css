@@ -57,9 +57,7 @@ img{
     padding-top: 94px;
     padding-bottom: 94px;
 }
-.section-adv{
-    padding-top: 94px;
-}
+
 
 /*========= хэдер =======*/
 .header-container{
@@ -120,6 +118,8 @@ img{
     display: flex;
 }
  .contacts .item {
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: var(--main-text-color);
     font-weight: 500;
@@ -139,6 +139,7 @@ margin-right: var(--space-icons);
 /* ========= main ========*/
 
 .hero{
+    width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
     background-color: var(--hero-bcg);
@@ -191,26 +192,27 @@ margin-right: var(--space-icons);
     display: flex;
     flex-wrap: wrap;
 }
-.adv-element{
+.strength-element{
     flex-basis: calc((100%-90px)/4);
     max-width: 270px;
 }
-.adv-element:not(:nth-child(4)){
+.strength-element:not(:nth-child(4)){
     margin-right:var(--card-set-gap);
 }
-.adv-element>.title{
+.strength-element>.title{
     margin-bottom: 10px;
 }
-.adv-icon-bcg{
+.strength-icon-bcg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 270px;
     height: 120px;
     margin-bottom: 30px;
 
     background-color: var(--secondary-bcg) ;
 }
-.adv-icon{
-  margin: 25px 100px;
-}
+
 .list .title{
     font-size: 14px;
     line-height: 1.2;
@@ -226,7 +228,7 @@ margin-right: var(--space-icons);
     font-size: 36px;
     line-height: 1.2;
     text-align: center;
-     color: var(--title-text-color);
+    color: var(--title-text-color);
 
 }
 .job-section{
@@ -283,7 +285,7 @@ margin-right: var(--space-icons);
 .socials{
     display: flex;
     justify-content: center;
-    margin: 16px 32px 0 32px;
+    margin-top: 16px;
     list-style: none;
 }
 .link-icon{
@@ -305,36 +307,40 @@ margin-right: var(--space-icons);
 }
 .box-client{
     display: flex;
-    width: 170px;
-    height: 92px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     border: 1px solid var(--icon-color);
+    border-radius: 4px;
+    fill: var(--icon-color);
 }
-.box-client:hover{
+.box-client:hover,
+.box-client:focus{
    border: 1px solid var(--accent-color);
+   fill: var(--accent-color);
 }
+
 .icon-thumb{
     justify-content: center;
 }
-
+.icon-thumb-list{
+    width: 170px;
+    height: 92px;
+}
 .gap:not(:last-child){
     margin-right: var(--card-set-gap);
-}
-.logo-clients{
-   margin: auto auto;
-    fill: var(--icon-color);
-}
-.logo-clients:hover,
-.logo-clients:focus{
-    fill: var(--accent-color);
 }
 
  /*======== футер ======== */
  .footer {
     background-color: var(--bcg-footer);
     padding-bottom: 60px;
+    padding-top: 60px;
  }
  .position-footer{
     display: flex;
+    align-items: baseline;
  }
 .logo-footer{
     display: inline-block;
@@ -360,11 +366,9 @@ margin-right: var(--space-icons);
     color: var(--white-text);
 }
 .first-column{
-    margin-top: 60px;
     margin-right: 70px;
 }
 .second-column{
-    margin-top: 72px;
     color:#FFFFFF;
     font-weight: 700;
     line-height: 1.1;
@@ -464,11 +468,10 @@ margin-right: var(--space-icons);
 .list .link{
     text-decoration: none;
 }
-
+.card-project{
+    display: block;
+}
 .card-project:hover,
 .card-project:focus{
-    position: absolute;
-    background: #FFFFFF;
-    border: 1px solid #EEEEEE;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
